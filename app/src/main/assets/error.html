@@ -1,0 +1,23 @@
+<!-- custom_error_page.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error Page</title>
+</head>
+<body>
+<h1>Error Occurred</h1>
+<script>
+// Get the error details from the query parameters
+const urlParams = new URLSearchParams(window.location.search);
+const errorCode = urlParams.get('errorCode');
+const description = urlParams.get('description');
+const urlE = urlParams.get("url");
+const exit = urlParams.get("ext")
+// Display the error details on the page
+document.write(`<p>Error Code: ${errorCode}</p>`);
+document.write(`<p>Error Description: ${description}</p>`);
+document.write(`<p>Url: $(urlE)</p>`)
+document.write(`<a href="$(exit)">${urlParams.get("eName")}</a>`)
+</script>
+</body>
+</html>
